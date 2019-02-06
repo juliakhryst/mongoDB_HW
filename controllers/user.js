@@ -36,9 +36,7 @@ function getUser(req, res) {
       else {
         if (user.numberOfArticles > 0){
           Article.find({owner: req.params.id}).lean().exec( function(err,articles){
-            // let response = Object.assign({}, user);
             user.articles = articles;
-            // console.log(user);
             res.status(200).send(user);
           })
         }

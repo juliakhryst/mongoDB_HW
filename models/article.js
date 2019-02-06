@@ -7,8 +7,6 @@ const ArticleSchema = new Schema({
         minLenght: 5,
         maxLength: 400,
         required: true
-        // index: String
-        //type: mongoose.Types.ObjectId
     },
     subtitle: {
         type: String,
